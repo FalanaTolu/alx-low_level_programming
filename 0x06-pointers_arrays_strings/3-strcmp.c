@@ -10,32 +10,16 @@
 
 int _strcmp(char *s1, char *s2)
 {
-int i = 0;
-int j = 0;
-int k = 0;
 
-while (*(s1 + i) != '\0')
+while (*s1 == *s2)
 {
-s1++;
-j++;
-}
 
-while  (*(s2 + i) != '\0')
-{
-s2++;
-k++;
-}
-
-if (j == k)
+if (*s1 == '\0')
 {
 return (0);
 }
-else if (j < k)
-{
-return (-15);
+s1++;
+s2++;
 }
-else
-{
-return (15);
-}
+return (*s1 - *s2);
 }
