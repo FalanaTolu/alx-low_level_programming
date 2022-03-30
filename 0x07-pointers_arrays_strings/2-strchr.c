@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
-* _strchr - returns a pointer to the first occurrence of a character 
+* _strchr - returns a pointer to the first occurrence of a character
 * in a string, or NULL if the character is not found
 * @c: character to search for
 * @s: string to search from
-* Return: pointer to the first occurrence of the character or NULL 
+* Return: pointer to the first occurrence of the character or NULL
 * if the character is not found
 */
 
