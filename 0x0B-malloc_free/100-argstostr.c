@@ -20,7 +20,6 @@ for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
 l++;
-l++;
 }
 
 s = malloc(sizeof(char) * (l + 1));
