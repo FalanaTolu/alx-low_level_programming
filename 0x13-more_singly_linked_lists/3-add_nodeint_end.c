@@ -24,7 +24,8 @@ if (*head == NULL)
 return (new);
 }
 
-*tmp = *head;
+tmp = *head;
+
 while (tmp->next)
 tmp = tmp->next;
 
