@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
 * *find_listint_loop - finds the loop in a linked list
@@ -9,22 +9,25 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-if (!head)
+listint_t *start = head;
+listint_t *stop = head;
+
+if (head == NULL)
 return (NULL);
 
-while (slow && fast && fast->next)
+while (start && stop && start->next)
 {
-fast = fast->next->next;
-slow = slow->next;
-if (fast == slow)
+start = start->next->next;
+stop = stop->next;
+if (start == stop)
 {
-slow = head;
-while (slow != fast)
+stop = head;
+while (stop != start)
 {
-slow = slow->next;
-fast = fast->next;
+stop = stop->next;
+start = start->next;
 }
-return (fast);
+return (start);
 }
 }
 
